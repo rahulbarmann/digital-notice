@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion'
 
 export function Hero() {
+  
+  const scrollToSection = (section: string) => {
+    const sectionId = section.toLowerCase()
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <div className="min-h-screen bg-black relative overflow-hidden pt-16 md:pt-0">
       <motion.div 
@@ -69,7 +77,7 @@ export function Hero() {
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="flex justify-between items-center gap-4 md:gap-8 py-3 md:py-4 px-2 cursor-pointer">
+                  <div className="flex justify-between items-center gap-4 md:gap-8 py-3 md:py-4 px-2 cursor-pointer" onClick={() => scrollToSection('CONTACT')}>
                     <motion.span 
                       className="text-white font-bold text-base md:text-xl uppercase tracking-wider relative"
                       whileHover={{ x: 5 }}
@@ -105,8 +113,8 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
-                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto">
-                  Digital Notice Media Labs is a media agency
+                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto border border-green-500 rounded-lg bg-black/50 p-4">
+                  <span className='text-green-500'>Digital Notice Media Labs</span> is a media agency
                   specializing in web3 specific projects.
                 </p>
               </motion.div>

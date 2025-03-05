@@ -45,7 +45,7 @@ export function ContactUs() {
           transition={{ duration: 1.2 }}
         />
         <motion.img
-          src="/avatar.png"
+          src="/avatar1.png"
           alt="Background Avatar"
           className="h-[113%] w-full object-cover object-left-top"
           initial={{ scale: 1.1, opacity: 0 }}
