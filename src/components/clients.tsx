@@ -348,7 +348,7 @@ export function Clients() {
           updateVisibleCompanies(newIndex);
           return newIndex;
         });
-      }, 3000); // Scroll every 3 seconds
+      }, 5000); // Scroll every 5 seconds
     }
     
     return () => clearInterval(interval);
@@ -365,7 +365,7 @@ export function Clients() {
           updateVisiblePartners(newIndex);
           return newIndex;
         });
-      }, 3000); // Scroll every 3 seconds
+      }, 5000); // Scroll every 5 seconds
     }
     
     return () => clearInterval(interval);
