@@ -25,7 +25,7 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         
-        <div className="h-[70vh] md:h-[80vh] w-full px-4 md:px-12 lg:px-24">
+        <div className="h-[85vh] md:h-[90vh] w-full px-4 md:px-12 lg:px-24">
           <div className="h-full w-full scale-105 md:scale-100">
             <motion.img 
               src="/digital.png"
@@ -58,7 +58,7 @@ export function Hero() {
         </div>
 
 
-        <div className="container mx-auto px-4 md:px-6 mt-auto mb-0 md:mb-5">
+        <div className="container mx-auto px-4 md:px-6 mt-auto mb-0 md:mb-10 lg:mb-[-20px]">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,13 +109,19 @@ export function Hero() {
               </motion.div>
 
               <motion.div 
-                className="w-full md:flex-1 order-1 md:order-2"
+                className="w-full md:flex-1 order-1 md:order-2 relative group overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ scale: 1.01 }}
               >
-                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto border border-green-500 rounded-lg bg-black/50 p-4">
-                  <span className='text-green-500'>Digital Notice Media Labs</span> is a media agency
+                {/* This div acts as the sliding overlay */}
+                <div 
+                  className="absolute inset-0 bg-green-500 transform -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+                />
+                
+                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto border border-green-500/30 p-4 relative z-10 group-hover:text-black transition-colors duration-300">
+                  <span className='text-green-500 group-hover:text-black group-hover:font-bold transition-colors duration-300'>Digital Notice Media Labs</span> is a media agency
                   specializing in web3 specific projects.
                 </p>
               </motion.div>
