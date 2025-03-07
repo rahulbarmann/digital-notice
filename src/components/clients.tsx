@@ -1,81 +1,81 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 // clients
-import ABCCExch from "../../public/Partners Logo/400x200/Clients/ABCC Exchange.png";
-import Acorn from "../../public/Partners Logo/400x200/Clients/Acorn Collective.png";
-import Adhive from "../../public/Partners Logo/400x200/Clients/adhive.png";
-import AssetStream from "../../public/Partners Logo/400x200/Clients/assetstream.png";
-import blocklancer from "../../public/Partners Logo/400x200/Clients/block-lancer.png";
-import beat from "../../public/Partners Logo/400x200/Clients/Beat.png";
-import birdchain from "../../public/Partners Logo/400x200/Clients/birdchain.png";
-import bitmart from "../../public/Partners Logo/400x200/Clients/Bitmart Exchange.png";
-import bitxoxo from "../../public/Partners Logo/400x200/Clients/Bitxoxo Exchange.png";
-import blockium from "../../public/Partners Logo/400x200/Clients/blockium.png";
-import cloud from "../../public/Partners Logo/400x200/Clients/cloud-moolah.png";
-import coin from "../../public/Partners Logo/400x200/Clients/coingecko.png";
-import concert from "../../public/Partners Logo/400x200/Clients/concert-vr.png";
-import dad from "../../public/Partners Logo/400x200/Clients/dad.png";
-import ftech from "../../public/Partners Logo/400x200/Clients/ftech.png";
-import grape from "../../public/Partners Logo/400x200/Clients/grapevine.png";
-import hypd from "../../public/Partners Logo/400x200/Clients/hypd.png";
-import la from "../../public/Partners Logo/400x200/Clients/la-token.png";
-import lgo from "../../public/Partners Logo/400x200/Clients/lgo.png";
-import lympo from "../../public/Partners Logo/400x200/Clients/Lympo.png";
-import medi from "../../public/Partners Logo/400x200/Clients/medichain.png";
-import mobu from "../../public/Partners Logo/400x200/Clients/mobu.png";
-import monarch from "../../public/Partners Logo/400x200/Clients/cloud-moolah.png";
-import nauticus from "../../public/Partners Logo/400x200/Clients/nauticus.png";
-import neurograss from "../../public/Partners Logo/400x200/Clients/neurogress.png";
-import okex from "../../public/Partners Logo/400x200/Clients/OKEx-logo_RGB-01.png";
-import organic from "../../public/Partners Logo/400x200/Clients/Organic Token.png";
-import ponder from "../../public/Partners Logo/400x200/Clients/ponder.png";
-import q1 from "../../public/Partners Logo/400x200/Clients/q1net.png";
-import robbotina from "../../public/Partners Logo/400x200/Clients/robbotina.png";
-import somnium from "../../public/Partners Logo/400x200/Clients/somnium-space.png";
-import sunmoney from "../../public/Partners Logo/400x200/Clients/sunmoney.png";
-import tvtwo from "../../public/Partners Logo/400x200/Clients/TV TWO.png";
-import velix from "../../public/Partners Logo/400x200/Clients/Velix.ID.png";
+import ABCCExch from "../../src/PartnersLogo/400x200/Clients/ABCC Exchange.png";
+import Acorn from "../../src/PartnersLogo/400x200/Clients/Acorn Collective.png";
+import Adhive from "../../src/PartnersLogo/400x200/Clients/adhive.png";
+import AssetStream from "../../src/PartnersLogo/400x200/Clients/assetstream.png";
+import blocklancer from "../../src/PartnersLogo/400x200/Clients/block-lancer.png";
+import beat from "../../src/PartnersLogo/400x200/Clients/Beat.png";
+import birdchain from "../../src/PartnersLogo/400x200/Clients/birdchain.png";
+import bitmart from "../../src/PartnersLogo/400x200/Clients/Bitmart Exchange.png";
+import bitxoxo from "../../src/PartnersLogo/400x200/Clients/Bitxoxo Exchange.png";
+import blockium from "../../src/PartnersLogo/400x200/Clients/blockium.png";
+import cloud from "../../src/PartnersLogo/400x200/Clients/cloud-moolah.png";
+import coin from "../../src/PartnersLogo/400x200/Clients/coingecko.png";
+import concert from "../../src/PartnersLogo/400x200/Clients/concert-vr.png";
+import dad from "../../src/PartnersLogo/400x200/Clients/dad.png";
+import ftech from "../../src/PartnersLogo/400x200/Clients/ftech.png";
+import grape from "../../src/PartnersLogo/400x200/Clients/grapevine.png";
+import hypd from "../../src/PartnersLogo/400x200/Clients/hypd.png";
+import la from "../../src/PartnersLogo/400x200/Clients/la-token.png";
+import lgo from "../../src/PartnersLogo/400x200/Clients/lgo.png";
+import lympo from "../../src/PartnersLogo/400x200/Clients/Lympo.png";
+import medi from "../../src/PartnersLogo/400x200/Clients/medichain.png";
+import mobu from "../../src/PartnersLogo/400x200/Clients/mobu.png";
+import monarch from "../../src/PartnersLogo/400x200/Clients/cloud-moolah.png";
+import nauticus from "../../src/PartnersLogo/400x200/Clients/nauticus.png";
+import neurograss from "../../src/PartnersLogo/400x200/Clients/neurogress.png";
+import okex from "../../src/PartnersLogo/400x200/Clients/OKEx-logo_RGB-01.png";
+import organic from "../../src/PartnersLogo/400x200/Clients/Organic Token.png";
+import ponder from "../../src/PartnersLogo/400x200/Clients/ponder.png";
+import q1 from "../../src/PartnersLogo/400x200/Clients/q1net.png";
+import robbotina from "../../src/PartnersLogo/400x200/Clients/robbotina.png";
+import somnium from "../../src/PartnersLogo/400x200/Clients/somnium-space.png";
+import sunmoney from "../../src/PartnersLogo/400x200/Clients/sunmoney.png";
+import tvtwo from "../../src/PartnersLogo/400x200/Clients/TV TWO.png";
+import velix from "../../src/PartnersLogo/400x200/Clients/Velix.ID.png";
 
 // partners
-import aba from "../../public/Partners Logo/400x200/Events/aba 1.png";
-import ABA from "../../public/Partners Logo/400x200/Events/ABA-summit.png";
-import altcoin from "../../public/Partners Logo/400x200/Events/altcoin-mag.png";
-import ascential from "../../public/Partners Logo/400x200/Events/ascential.png";
-import b2e from "../../public/Partners Logo/400x200/Events/b2e-asia.png";
-import be2020 from "../../public/Partners Logo/400x200/Events/be2020.png";
-import bfc from "../../public/Partners Logo/400x200/Events/bfc.png";
-import blife from "../../public/Partners Logo/400x200/Events/blife.png";
-import blockbeats from "../../public/Partners Logo/400x200/Events/blockbeats.png";
-import blockchainevent from "../../public/Partners Logo/400x200/Events/blockchain-eventon.png";
-import blockckshow from "../../public/Partners Logo/400x200/Events/blockshow.png";
-import blockonomic from "../../public/Partners Logo/400x200/Events/bloconomic.png";
-import bs from "../../public/Partners Logo/400x200/Events/bs.png";
-import cgc from "../../public/Partners Logo/400x200/Events/cgc-one.png";
-import chainplus from "../../public/Partners Logo/400x200/Events/chainplus-1.png";
-import chainpoint from "../../public/Partners Logo/400x200/Events/chainpoint.png";
-import chainway from "../../public/Partners Logo/400x200/Events/chainway.png";
-import coinsbank from "../../public/Partners Logo/400x200/Events/coinsbank.png";
-import cointelegraph from "../../public/Partners Logo/400x200/Events/Cointelegraph.png";
-import cryptochicks from "../../public/Partners Logo/400x200/Events/Cointelegraph.png";
-import deltasummit from "../../public/Partners Logo/400x200/Events/delta-summit.png";
-import descLogo from "../../public/Partners Logo/400x200/Events/descLogo.png";
-import dfine from "../../public/Partners Logo/400x200/Events/dfine.png";
-import dreamhatcher from "../../public/Partners Logo/400x200/Events/dreamhatcher.png";
-import dubaipolice from "../../public/Partners Logo/400x200/Events/dubai-police-big.png";
-import duxes from "../../public/Partners Logo/400x200/Events/duxes.png";
-import dwtc from "../../public/Partners Logo/400x200/Events/DWTC.png"
-import gba from "../../public/Partners Logo/400x200/Events/GBA.png";
-import gbf from "../../public/Partners Logo/400x200/Events/GBF.png";
-import kbw from "../../public/Partners Logo/400x200/Events/kbw2019.png";
-import labw from "../../public/Partners Logo/400x200/Events/LABW-2018.png";
-import llghy from "../../public/Partners Logo/400x200/Events/LL-Ghy.png";
-import manila from "../../public/Partners Logo/400x200/Events/manila.png";
-import mbw from "../../public/Partners Logo/400x200/Events/mbw.png";
-import satoshi from "../../public/Partners Logo/400x200/Events/satoshi-united.png";
-import startupassam from "../../public/Partners Logo/400x200/Events/startup-assam.png";
-import tokenfest from "../../public/Partners Logo/400x200/Events/tokenfest.png";
-import untraceable from "../../public/Partners Logo/400x200/Events/untraceable.png";
-import wbf from "../../public/Partners Logo/400x200/Events/wbf-logo.png";
+import aba from "../../src/PartnersLogo/400x200/Events/aba 1.png";
+import ABA from "../../src/PartnersLogo/400x200/Events/ABA-summit.png";
+import altcoin from "../../src/PartnersLogo/400x200/Events/altcoin-mag.png";
+import ascential from "../../src/PartnersLogo/400x200/Events/ascential.png";
+import b2e from "../../src/PartnersLogo/400x200/Events/b2e-asia.png";
+import be2020 from "../../src/PartnersLogo/400x200/Events/be2020.png";
+import bfc from "../../src/PartnersLogo/400x200/Events/bfc.png";
+import blife from "../../src/PartnersLogo/400x200/Events/blife.png";
+import blockbeats from "../../src/PartnersLogo/400x200/Events/blockbeats.png";
+import blockchainevent from "../../src/PartnersLogo/400x200/Events/blockchain-eventon.png";
+import blockckshow from "../../src/PartnersLogo/400x200/Events/blockshow.png";
+import blockonomic from "../../src/PartnersLogo/400x200/Events/bloconomic.png";
+import bs from "../../src/PartnersLogo/400x200/Events/bs.png";
+import cgc from "../../src/PartnersLogo/400x200/Events/cgc-one.png";
+import chainplus from "../../src/PartnersLogo/400x200/Events/chainplus-1.png";
+import chainpoint from "../../src/PartnersLogo/400x200/Events/chainpoint.png";
+import chainway from "../../src/PartnersLogo/400x200/Events/chainway.png";
+import coinsbank from "../../src/PartnersLogo/400x200/Events/coinsbank.png";
+import cointelegraph from "../../src/PartnersLogo/400x200/Events/Cointelegraph.png";
+import cryptochicks from "../../src/PartnersLogo/400x200/Events/Cointelegraph.png";
+import deltasummit from "../../src/PartnersLogo/400x200/Events/delta-summit.png";
+import descLogo from "../../src/PartnersLogo/400x200/Events/descLogo.png";
+import dfine from "../../src/PartnersLogo/400x200/Events/dfine.png";
+import dreamhatcher from "../../src/PartnersLogo/400x200/Events/dreamhatcher.png";
+import dubaipolice from "../../src/PartnersLogo/400x200/Events/dubai-police-big.png";
+import duxes from "../../src/PartnersLogo/400x200/Events/duxes.png";
+import dwtc from "../../src/PartnersLogo/400x200/Events/DWTC.png";
+import gba from "../../src/PartnersLogo/400x200/Events/GBA.png";
+import gbf from "../../src/PartnersLogo/400x200/Events/GBF.png";
+import kbw from "../../src/PartnersLogo/400x200/Events/kbw2019.png";
+import labw from "../../src/PartnersLogo/400x200/Events/LABW-2018.png";
+import llghy from "../../src/PartnersLogo/400x200/Events/LL-Ghy.png";
+import manila from "../../src/PartnersLogo/400x200/Events/manila.png";
+import mbw from "../../src/PartnersLogo/400x200/Events/mbw.png";
+import satoshi from "../../src/PartnersLogo/400x200/Events/satoshi-united.png";
+import startupassam from "../../src/PartnersLogo/400x200/Events/startup-assam.png";
+import tokenfest from "../../src/PartnersLogo/400x200/Events/tokenfest.png";
+import untraceable from "../../src/PartnersLogo/400x200/Events/untraceable.png";
+import wbf from "../../src/PartnersLogo/400x200/Events/wbf-logo.png";
 
 
 const companies = [
@@ -328,21 +328,22 @@ const eventPartners = [
 ];
 
 
-
-
 export function Clients() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  // Separate state for each carousel
+  const [clientActiveIndex, setClientActiveIndex] = useState(0);
+  const [partnerActiveIndex, setPartnerActiveIndex] = useState(0);
+  const [clientAutoScrolling, setClientAutoScrolling] = useState(true);
+  const [partnerAutoScrolling, setPartnerAutoScrolling] = useState(true);
   const [visibleCompanies, setVisibleCompanies] = useState<number[]>([0, 1, 2]); // Initially show first 3
   const [visiblePartners, setVisiblePartners] = useState<number[]>([0, 1, 2]); // Initially show first 3
   
-  
+  // Client carousel auto-scrolling
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     
-    if (isAutoScrolling) {
+    if (clientAutoScrolling) {
       interval = setInterval(() => {
-        setActiveIndex((prev) => {
+        setClientActiveIndex((prev) => {
           const newIndex = prev >= companies.length - 1 ? 0 : prev + 1;
           updateVisibleCompanies(newIndex);
           return newIndex;
@@ -351,7 +352,24 @@ export function Clients() {
     }
     
     return () => clearInterval(interval);
-  }, [isAutoScrolling]);
+  }, [clientAutoScrolling]);
+
+  // Partner carousel auto-scrolling - separate effect
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    
+    if (partnerAutoScrolling) {
+      interval = setInterval(() => {
+        setPartnerActiveIndex((prev) => {
+          const newIndex = prev >= eventPartners.length - 1 ? 0 : prev + 1;
+          updateVisiblePartners(newIndex);
+          return newIndex;
+        });
+      }, 3000); // Scroll every 3 seconds
+    }
+    
+    return () => clearInterval(interval);
+  }, [partnerAutoScrolling]);
 
   const updateVisibleCompanies = (centerIndex: number) => {
     // Calculate which companies should be visible (center +/- 1, with wrap-around)
@@ -362,33 +380,17 @@ export function Clients() {
   };
 
   const handleClientClick = (index: number) => {
-    setActiveIndex(index);
+    setClientActiveIndex(index);
     updateVisibleCompanies(index);
-    setIsAutoScrolling(false); // Pause auto-scrolling when user interacts
+    setClientAutoScrolling(false); // Pause auto-scrolling when user interacts
     
     // Resume auto-scrolling after 5 seconds of inactivity
     const timeout = setTimeout(() => {
-      setIsAutoScrolling(true);
+      setClientAutoScrolling(true);
     }, 5000);
     
     return () => clearTimeout(timeout);
   };
-
-  useEffect(() => {
-    let interval: ReturnType<typeof setInterval>;
-    
-    if (isAutoScrolling) {
-      interval = setInterval(() => {
-        setActiveIndex((prev) => {
-          const newIndex = prev >= eventPartners.length - 1 ? 0 : prev + 1;
-          updateVisiblePartners(newIndex);
-          return newIndex;
-        });
-      }, 3000); // Scroll every 3 seconds
-    }
-    
-    return () => clearInterval(interval);
-  }, [isAutoScrolling]);
 
   const updateVisiblePartners = (centerIndex: number) => {
     // Calculate which partners should be visible (center +/- 1, with wrap-around)
@@ -399,18 +401,17 @@ export function Clients() {
   };
 
   const handlePartnerClick = (index: number) => {
-    setActiveIndex(index);
+    setPartnerActiveIndex(index);
     updateVisiblePartners(index);
-    setIsAutoScrolling(false); // Pause auto-scrolling when user interacts
+    setPartnerAutoScrolling(false); // Pause auto-scrolling when user interacts
     
     // Resume auto-scrolling after 5 seconds of inactivity
     const timeout = setTimeout(() => {
-      setIsAutoScrolling(true);
+      setPartnerAutoScrolling(true);
     }, 5000);
     
     return () => clearTimeout(timeout);
   };
-
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -479,7 +480,7 @@ export function Clients() {
           <div className="relative px-4 py-12 overflow-hidden">
             {/* Left arrow */}
             <button 
-              onClick={() => handleClientClick((activeIndex - 1 + companies.length) % companies.length)}
+              onClick={() => handleClientClick((clientActiveIndex - 1 + companies.length) % companies.length)}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
               aria-label="Previous company"
             >
@@ -492,7 +493,7 @@ export function Clients() {
             <div className="flex justify-center items-center gap-4 md:gap-8 transition-all duration-500">
               {visibleCompanies.map((companyIndex, i) => (
                 <motion.div 
-                  key={companies[companyIndex].id}
+                  key={`company-${companies[companyIndex].id}`}
                   className={`relative cursor-pointer transition-all duration-500 ease-out flex-shrink-0 
                     ${i === 1 ? 'w-64 md:w-96 mx-4 z-20' : 'w-32 md:w-64 opacity-50 z-10'}`}
                   onClick={() => handleClientClick(companyIndex)}
@@ -528,7 +529,7 @@ export function Clients() {
             
             {/* Right arrow */}
             <button 
-              onClick={() => handleClientClick((activeIndex + 1) % companies.length)}
+              onClick={() => handleClientClick((clientActiveIndex + 1) % companies.length)}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
               aria-label="Next company"
             >
@@ -539,13 +540,13 @@ export function Clients() {
           </div>
 
           {/* Navigation dots */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-2 mt-8 flex-wrap">
             {companies.map((_, index) => (
               <button
-                key={index}
+                key={`client-dot-${index}`}
                 onClick={() => handleClientClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
+                  clientActiveIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
                 }`}
                 aria-label={`View client ${index + 1}`}
               />
@@ -553,7 +554,7 @@ export function Clients() {
           </div>
         </motion.div>
 
-        {/* clinets */}
+        {/* Event partners heading */}
         <motion.h2 
           className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mb-12 md:mb-24"
           variants={itemVariants}
@@ -585,7 +586,7 @@ export function Clients() {
           <div className="relative px-4 py-12 overflow-hidden">
             {/* Left arrow */}
             <button 
-              onClick={() => handlePartnerClick((activeIndex - 1 + eventPartners.length) % eventPartners.length)}
+              onClick={() => handlePartnerClick((partnerActiveIndex - 1 + eventPartners.length) % eventPartners.length)}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
               aria-label="Previous partner"
             >
@@ -598,7 +599,7 @@ export function Clients() {
             <div className="flex justify-center items-center gap-4 md:gap-8 transition-all duration-500">
               {visiblePartners.map((partnerIndex, i) => (
                 <motion.div 
-                  key={eventPartners[partnerIndex].id}
+                  key={`partner-${eventPartners[partnerIndex].id}`}
                   className={`relative cursor-pointer transition-all duration-500 ease-out flex-shrink-0 
                     ${i === 1 ? 'w-64 md:w-96 mx-4 z-20' : 'w-32 md:w-64 opacity-50 z-10'}`}
                   onClick={() => handlePartnerClick(partnerIndex)}
@@ -634,7 +635,7 @@ export function Clients() {
             
             {/* Right arrow */}
             <button 
-              onClick={() => handlePartnerClick((activeIndex + 1) % eventPartners.length)}
+              onClick={() => handlePartnerClick((partnerActiveIndex + 1) % eventPartners.length)}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
               aria-label="Next partner"
             >
@@ -645,13 +646,13 @@ export function Clients() {
           </div>
 
           {/* Navigation dots */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-2 mt-8 flex-wrap">
             {eventPartners.map((_, index) => (
               <button
-                key={index}
+                key={`partner-dot-${index}`}
                 onClick={() => handlePartnerClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
+                  partnerActiveIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
                 }`}
                 aria-label={`View partner ${index + 1}`}
               />
