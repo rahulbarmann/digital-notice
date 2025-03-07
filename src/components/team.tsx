@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github } from 'lucide-react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function Teams() {
@@ -166,7 +166,7 @@ export default function Teams() {
                                         className="text-white hover:text-[#0077b5] transition-colors"
                                         aria-label={`LinkedIn profile of ${member.name}`}
                                     >
-                                        <Linkedin size={20} />
+                                        <FaLinkedin size={20} />
                                     </a>
                                 )}
                                 {member.github && (
@@ -177,7 +177,7 @@ export default function Teams() {
                                         className="text-white hover:text-[#4ade80] transition-colors"
                                         aria-label={`GitHub profile of ${member.name}`}
                                     >
-                                        <Github size={20} />
+                                        <FaGithub size={20} />
                                     </a>
                                 )}
                             </div>
