@@ -2,10 +2,10 @@ import { Navbar } from './components/navbar'
 import { Hero } from './components/hero'
 import { Stats } from './components/stats'
 import { Services } from './components/services'
-import { TeamCarousel } from './components/team'
 import { Clients } from './components/clients'
 import { ContactUs } from './components/contactus'
 import { motion } from 'framer-motion'
+import Teams from './components/team'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -51,7 +51,7 @@ export default function App() {
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeInUp}
       >
-        <TeamCarousel />
+        <Teams />
       </motion.section>
       <motion.section 
         id="clients"

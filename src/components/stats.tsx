@@ -146,18 +146,6 @@ export function Stats() {
             />
           </motion.div>
         </motion.div>
-
-        <motion.p 
-          className="text-gray-400 text-center md:text-right mt-8 text-sm"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          Since its inception, DIGITAL<br/>
-          NOTICE has been helping<br/>
-          customers reach new heights.
-        </motion.p>
       </div>
     </div>
   )

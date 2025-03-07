@@ -929,7 +929,7 @@ didyoumean@^1.2.2:
 "digital-notice@file:.":
   version "0.0.0"
   dependencies:
-    digital-notice "file:../../../../AppData/Local/Yarn/Cache/v6/npm-digital-notice-0.0.0-ca4eb528-d481-4ce5-8938-fa51fd27c93a-1737559488256/node_modules/digital-notice"
+    digital-notice "file:../../../Library/Caches/Yarn/v6/npm-digital-notice-0.0.0-a5709a8a-27c7-4e18-afc2-b40f0b0c0731-1741387396835/node_modules/digital-notice"
     framer-motion "^11.18.2"
     lucide-react "^0.469.0"
     react "^18.3.1"
@@ -1709,6 +1709,11 @@ react-dom@^18.3.1:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-icons@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.5.0.tgz#8aa25d3543ff84231685d3331164c00299cdfaf2"
+  integrity sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==
 
 react-intersection-observer@^9.15.0:
   version "9.15.0"

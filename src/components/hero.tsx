@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion'
 
 export function Hero() {
+  
+  const scrollToSection = (section: string) => {
+    const sectionId = section.toLowerCase()
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <div className="min-h-screen bg-black relative overflow-hidden pt-16 md:pt-0">
       <motion.div 
@@ -16,6 +24,7 @@ export function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
+        
         <div className="h-[85vh] md:h-[90vh] w-full px-4 md:px-12 lg:px-24">
           <div className="h-full w-full scale-105 md:scale-100">
             <motion.img 
@@ -35,9 +44,9 @@ export function Hero() {
         </div>
       </motion.div>
       
-      <div className="relative z-20 min-h-[calc(100vh-4rem)] flex flex-col">
-        {/* NOTICE text positioned absolutely for mobile */}
-        <div className="md:hidden absolute bottom-[35%] right-4">
+      <div className="relative z-20 flex flex-col justify-between h-screen">
+        {/* NOTICE text positioned absolutely for mobile - adjusted positioning */}
+        <div className="lg:hidden absolute bottom-[50%] md:bottom-[30%] right-4">
           <motion.h2
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -48,8 +57,8 @@ export function Hero() {
           </motion.h2>
         </div>
 
-        {/* Bottom content */}
-        <div className="container mx-auto px-4 md:px-6 mt-auto">
+
+        <div className="container mx-auto px-4 md:px-6 mt-auto mb-0 md:mb-10 lg:mb-[-20px]">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,7 +78,7 @@ export function Hero() {
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="flex justify-between items-center gap-4 md:gap-8 py-3 md:py-4 px-2 cursor-pointer">
+                  <div className="flex justify-between items-center gap-4 md:gap-8 py-3 md:py-4 px-2 cursor-pointer" onClick={() => scrollToSection('CONTACT')}>
                     <motion.span 
                       className="text-white font-bold text-base md:text-xl uppercase tracking-wider relative"
                       whileHover={{ x: 5 }}
@@ -100,19 +109,25 @@ export function Hero() {
               </motion.div>
 
               <motion.div 
-                className="w-full md:flex-1 order-1 md:order-2"
+                className="w-full md:flex-1 order-1 md:order-2 relative group overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ scale: 1.01 }}
               >
-                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto">
-                  Digital Notice Media Labs is a media agency
+                {/* This div acts as the sliding overlay */}
+                <div 
+                  className="absolute inset-0 bg-green-500 transform -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+                />
+                
+                <p className="text-gray-200 text-sm md:text-base lg:text-lg text-left md:text-center max-w-md mx-auto border border-green-500/30 p-4 relative z-10 group-hover:text-black transition-colors duration-300">
+                  <span className='text-green-500 group-hover:text-black group-hover:font-bold transition-colors duration-300'>Digital Notice Media Labs</span> is a media agency
                   specializing in web3 specific projects.
                 </p>
               </motion.div>
 
               {/* NOTICE text for desktop only */}
-              <div className="hidden md:flex w-full md:flex-1 justify-end order-3">
+              <div className="hidden lg:flex w-full md:flex-1 justify-end order-3">
                 <motion.h2
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -129,4 +144,3 @@ export function Hero() {
     </div>
   )
 }
-
