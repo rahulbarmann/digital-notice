@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+// clients
 import ABCCExch from "../../public/Partners Logo/400x200/Clients/ABCC Exchange.png";
 import Acorn from "../../public/Partners Logo/400x200/Clients/Acorn Collective.png";
 import Adhive from "../../public/Partners Logo/400x200/Clients/adhive.png";
@@ -34,6 +35,47 @@ import somnium from "../../public/Partners Logo/400x200/Clients/somnium-space.pn
 import sunmoney from "../../public/Partners Logo/400x200/Clients/sunmoney.png";
 import tvtwo from "../../public/Partners Logo/400x200/Clients/TV TWO.png";
 import velix from "../../public/Partners Logo/400x200/Clients/Velix.ID.png";
+
+// partners
+import aba from "../../public/Partners Logo/400x200/Events/aba 1.png";
+import ABA from "../../public/Partners Logo/400x200/Events/ABA-summit.png";
+import altcoin from "../../public/Partners Logo/400x200/Events/altcoin-mag.png";
+import ascential from "../../public/Partners Logo/400x200/Events/ascential.png";
+import b2e from "../../public/Partners Logo/400x200/Events/b2e-asia.png";
+import be2020 from "../../public/Partners Logo/400x200/Events/be2020.png";
+import bfc from "../../public/Partners Logo/400x200/Events/bfc.png";
+import blife from "../../public/Partners Logo/400x200/Events/blife.png";
+import blockbeats from "../../public/Partners Logo/400x200/Events/blockbeats.png";
+import blockchainevent from "../../public/Partners Logo/400x200/Events/blockchain-eventon.png";
+import blockckshow from "../../public/Partners Logo/400x200/Events/blockshow.png";
+import blockonomic from "../../public/Partners Logo/400x200/Events/bloconomic.png";
+import bs from "../../public/Partners Logo/400x200/Events/bs.png";
+import cgc from "../../public/Partners Logo/400x200/Events/cgc-one.png";
+import chainplus from "../../public/Partners Logo/400x200/Events/chainplus-1.png";
+import chainpoint from "../../public/Partners Logo/400x200/Events/chainpoint.png";
+import chainway from "../../public/Partners Logo/400x200/Events/chainway.png";
+import coinsbank from "../../public/Partners Logo/400x200/Events/coinsbank.png";
+import cointelegraph from "../../public/Partners Logo/400x200/Events/Cointelegraph.png";
+import cryptochicks from "../../public/Partners Logo/400x200/Events/Cointelegraph.png";
+import deltasummit from "../../public/Partners Logo/400x200/Events/delta-summit.png";
+import descLogo from "../../public/Partners Logo/400x200/Events/descLogo.png";
+import dfine from "../../public/Partners Logo/400x200/Events/dfine.png";
+import dreamhatcher from "../../public/Partners Logo/400x200/Events/dreamhatcher.png";
+import dubaipolice from "../../public/Partners Logo/400x200/Events/dubai-police-big.png";
+import duxes from "../../public/Partners Logo/400x200/Events/duxes.png";
+import dwtc from "../../public/Partners Logo/400x200/Events/DWTC.png"
+import gba from "../../public/Partners Logo/400x200/Events/GBA.png";
+import gbf from "../../public/Partners Logo/400x200/Events/GBF.png";
+import kbw from "../../public/Partners Logo/400x200/Events/kbw2019.png";
+import labw from "../../public/Partners Logo/400x200/Events/LABW-2018.png";
+import llghy from "../../public/Partners Logo/400x200/Events/LL-Ghy.png";
+import manila from "../../public/Partners Logo/400x200/Events/manila.png";
+import mbw from "../../public/Partners Logo/400x200/Events/mbw.png";
+import satoshi from "../../public/Partners Logo/400x200/Events/satoshi-united.png";
+import startupassam from "../../public/Partners Logo/400x200/Events/startup-assam.png";
+import tokenfest from "../../public/Partners Logo/400x200/Events/tokenfest.png";
+import untraceable from "../../public/Partners Logo/400x200/Events/untraceable.png";
+import wbf from "../../public/Partners Logo/400x200/Events/wbf-logo.png";
 
 
 const companies = [
@@ -243,10 +285,57 @@ const companies = [
   }
 ];
 
+const eventPartners = [
+  { id: 1, name: "ABA Summit", logo: ABA, width: 200 },
+  { id: 2, name: "Altcoin Magazine", logo: altcoin, width: 200 },
+  { id: 3, name: "Ascential", logo: ascential, width: 200 },
+  { id: 4, name: "B2E Asia", logo: b2e, width: 200 },
+  { id: 5, name: "BE2020", logo: be2020, width: 200 },
+  { id: 6, name: "BFC", logo: bfc, width: 200 },
+  { id: 7, name: "Blife", logo: blife, width: 200 },
+  { id: 8, name: "BlockBeats", logo: blockbeats, width: 200 },
+  { id: 9, name: "Blockchain Eventon", logo: blockchainevent, width: 200 },
+  { id: 10, name: "BlockShow", logo: blockckshow, width: 200 },
+  { id: 11, name: "Bloconomic", logo: blockonomic, width: 200 },
+  { id: 12, name: "BS", logo: bs, width: 200 },
+  { id: 13, name: "CGC One", logo: cgc, width: 200 },
+  { id: 14, name: "ChainPlus", logo: chainplus, width: 200 },
+  { id: 15, name: "ChainPoint", logo: chainpoint, width: 200 },
+  { id: 16, name: "ChainWay", logo: chainway, width: 200 },
+  { id: 17, name: "CoinsBank", logo: coinsbank, width: 200 },
+  { id: 18, name: "CoinTelegraph", logo: cointelegraph, width: 200 },
+  { id: 19, name: "Crypto Chicks", logo: cryptochicks, width: 200 },
+  { id: 20, name: "Delta Summit", logo: deltasummit, width: 200 },
+  { id: 21, name: "Desc", logo: descLogo, width: 200 },
+  { id: 22, name: "Dfine", logo: dfine, width: 200 },
+  { id: 23, name: "DreamHatcher", logo: dreamhatcher, width: 200 },
+  { id: 24, name: "Dubai Police", logo: dubaipolice, width: 200 },
+  { id: 25, name: "Duxes", logo: duxes, width: 200 },
+  { id: 26, name: "DWTC", logo: dwtc, width: 200 },
+  { id: 27, name: "GBA", logo: gba, width: 200 },
+  { id: 28, name: "GBF", logo: gbf, width: 200 },
+  { id: 29, name: "KBW 2019", logo: kbw, width: 200 },
+  { id: 30, name: "LABW 2018", logo: labw, width: 200 },
+  { id: 31, name: "LL Ghy", logo: llghy, width: 200 },
+  { id: 32, name: "Manila", logo: manila, width: 200 },
+  { id: 33, name: "MBW", logo: mbw, width: 200 },
+  { id: 34, name: "Satoshi United", logo: satoshi, width: 200 },
+  { id: 35, name: "Startup Assam", logo: startupassam, width: 200 },
+  { id: 36, name: "Token Fest", logo: tokenfest, width: 200 },
+  { id: 37, name: "Untraceable", logo: untraceable, width: 200 },
+  { id: 38, name: "WBF", logo: wbf, width: 200 },
+  { id: 39, name: "ABA", logo: aba, width: 200 }
+];
+
+
+
+
 export function Clients() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const [visibleCompanies, setVisibleCompanies] = useState<number[]>([0, 1, 2]); // Initially show first 3
+  const [visiblePartners, setVisiblePartners] = useState<number[]>([0, 1, 2]); // Initially show first 3
+  
   
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -284,6 +373,44 @@ export function Clients() {
     
     return () => clearTimeout(timeout);
   };
+
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    
+    if (isAutoScrolling) {
+      interval = setInterval(() => {
+        setActiveIndex((prev) => {
+          const newIndex = prev >= eventPartners.length - 1 ? 0 : prev + 1;
+          updateVisiblePartners(newIndex);
+          return newIndex;
+        });
+      }, 3000); // Scroll every 3 seconds
+    }
+    
+    return () => clearInterval(interval);
+  }, [isAutoScrolling]);
+
+  const updateVisiblePartners = (centerIndex: number) => {
+    // Calculate which partners should be visible (center +/- 1, with wrap-around)
+    const total = eventPartners.length;
+    const prev = (centerIndex - 1 + total) % total;
+    const next = (centerIndex + 1) % total;
+    setVisiblePartners([prev, centerIndex, next]);
+  };
+
+  const handlePartnerClick = (index: number) => {
+    setActiveIndex(index);
+    updateVisiblePartners(index);
+    setIsAutoScrolling(false); // Pause auto-scrolling when user interacts
+    
+    // Resume auto-scrolling after 5 seconds of inactivity
+    const timeout = setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 5000);
+    
+    return () => clearTimeout(timeout);
+  };
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -421,6 +548,112 @@ export function Clients() {
                   activeIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
                 }`}
                 aria-label={`View client ${index + 1}`}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* clinets */}
+        <motion.h2 
+          className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mb-12 md:mb-24"
+          variants={itemVariants}
+        >
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            EVENTS AND CONFERENCES WE{' '}
+          </motion.span>
+          <motion.span 
+            className="text-[#00AB4F]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            PROUDLY PARTNER WITH
+          </motion.span>
+        </motion.h2>
+
+        {/* Partner logos carousel */}
+        <motion.div 
+          className="mb-16"
+          variants={itemVariants}
+        >
+          <div className="relative px-4 py-12 overflow-hidden">
+            {/* Left arrow */}
+            <button 
+              onClick={() => handlePartnerClick((activeIndex - 1 + eventPartners.length) % eventPartners.length)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
+              aria-label="Previous partner"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Carousel container */}
+            <div className="flex justify-center items-center gap-4 md:gap-8 transition-all duration-500">
+              {visiblePartners.map((partnerIndex, i) => (
+                <motion.div 
+                  key={eventPartners[partnerIndex].id}
+                  className={`relative cursor-pointer transition-all duration-500 ease-out flex-shrink-0 
+                    ${i === 1 ? 'w-64 md:w-96 mx-4 z-20' : 'w-32 md:w-64 opacity-50 z-10'}`}
+                  onClick={() => handlePartnerClick(partnerIndex)}
+                  whileHover={{ scale: i === 1 ? 1.05 : 1.1 }}
+                  layout
+                >
+                  <div className={`
+                    flex items-center justify-center p-6 rounded-xl h-40 md:h-56
+                    ${i === 1 ? 'bg-gradient-to-br from-white/65 to-white/50' : 'bg-gray-800/60'}
+                  `}>
+                    <img 
+                      src={eventPartners[partnerIndex].logo}
+                      alt={eventPartners[partnerIndex].name} 
+                      className={`
+                        object-contain max-h-full max-w-full transition-all
+                        ${i === 1 ? 'transform scale-110' : 'filter grayscale hover:filter-none'}
+                      `}
+                    />
+                  </div>
+                  {i === 1 && (
+                    <motion.div 
+                      className="absolute -bottom-2 left-0 right-0 text-center bg-[#00AB4F] text-white py-1 px-4 mx-auto w-3/4 rounded-full shadow-lg"
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {eventPartners[partnerIndex].name}
+                    </motion.div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Right arrow */}
+            <button 
+              onClick={() => handlePartnerClick((activeIndex + 1) % eventPartners.length)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
+              aria-label="Next partner"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {eventPartners.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handlePartnerClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`View partner ${index + 1}`}
               />
             ))}
           </div>
