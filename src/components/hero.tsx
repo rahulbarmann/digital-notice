@@ -24,8 +24,8 @@ export function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Reduced height to prevent overlap with bottom content */}
-        <div className="h-[70vh] md:h-[75vh] w-full px-4 md:px-12 lg:px-24">
+        
+        <div className="h-[70vh] md:h-[80vh] w-full px-4 md:px-12 lg:px-24">
           <div className="h-full w-full scale-105 md:scale-100">
             <motion.img 
               src="/digital.png"
@@ -46,7 +46,7 @@ export function Hero() {
       
       <div className="relative z-20 flex flex-col justify-between h-screen">
         {/* NOTICE text positioned absolutely for mobile - adjusted positioning */}
-        <div className="md:hidden absolute bottom-[40%] right-4">
+        <div className="lg:hidden absolute bottom-[50%] md:bottom-[30%] right-4">
           <motion.h2
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -57,8 +57,8 @@ export function Hero() {
           </motion.h2>
         </div>
 
-        {/* Bottom content - fixed positioning to prevent overlap */}
-        <div className="container mx-auto px-4 md:px-6 mt-auto mb-8 md:mb-12">
+
+        <div className="container mx-auto px-4 md:px-6 mt-auto mb-0 md:mb-5">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export function Hero() {
               </motion.div>
 
               {/* NOTICE text for desktop only */}
-              <div className="hidden md:flex w-full md:flex-1 justify-end order-3">
+              <div className="hidden lg:flex w-full md:flex-1 justify-end order-3">
                 <motion.h2
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
