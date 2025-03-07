@@ -318,7 +318,7 @@ export function Clients() {
       />
       
       {/* Main content */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto mt-7">
         {/* Heading */}
         <motion.h2 
           className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mb-12 md:mb-24"
