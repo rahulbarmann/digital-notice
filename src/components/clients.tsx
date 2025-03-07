@@ -1,48 +1,289 @@
-import { ArrowRight } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import ABCCExch from "../../public/Partners Logo/400x200/Clients/ABCC Exchange.png";
+import Acorn from "../../public/Partners Logo/400x200/Clients/Acorn Collective.png";
+import Adhive from "../../public/Partners Logo/400x200/Clients/adhive.png";
+import AssetStream from "../../public/Partners Logo/400x200/Clients/assetstream.png";
+import blocklancer from "../../public/Partners Logo/400x200/Clients/block-lancer.png";
+import beat from "../../public/Partners Logo/400x200/Clients/Beat.png";
+import birdchain from "../../public/Partners Logo/400x200/Clients/birdchain.png";
+import bitmart from "../../public/Partners Logo/400x200/Clients/Bitmart Exchange.png";
+import bitxoxo from "../../public/Partners Logo/400x200/Clients/Bitxoxo Exchange.png";
+import blockium from "../../public/Partners Logo/400x200/Clients/blockium.png";
+import cloud from "../../public/Partners Logo/400x200/Clients/cloud-moolah.png";
+import coin from "../../public/Partners Logo/400x200/Clients/coingecko.png";
+import concert from "../../public/Partners Logo/400x200/Clients/concert-vr.png";
+import dad from "../../public/Partners Logo/400x200/Clients/dad.png";
+import ftech from "../../public/Partners Logo/400x200/Clients/ftech.png";
+import grape from "../../public/Partners Logo/400x200/Clients/grapevine.png";
+import hypd from "../../public/Partners Logo/400x200/Clients/hypd.png";
+import la from "../../public/Partners Logo/400x200/Clients/la-token.png";
+import lgo from "../../public/Partners Logo/400x200/Clients/lgo.png";
+import lympo from "../../public/Partners Logo/400x200/Clients/Lympo.png";
+import medi from "../../public/Partners Logo/400x200/Clients/medichain.png";
+import mobu from "../../public/Partners Logo/400x200/Clients/mobu.png";
+import monarch from "../../public/Partners Logo/400x200/Clients/cloud-moolah.png";
+import nauticus from "../../public/Partners Logo/400x200/Clients/nauticus.png";
+import neurograss from "../../public/Partners Logo/400x200/Clients/neurogress.png";
+import okex from "../../public/Partners Logo/400x200/Clients/OKEx-logo_RGB-01.png";
+import organic from "../../public/Partners Logo/400x200/Clients/Organic Token.png";
+import ponder from "../../public/Partners Logo/400x200/Clients/ponder.png";
+import q1 from "../../public/Partners Logo/400x200/Clients/q1net.png";
+import robbotina from "../../public/Partners Logo/400x200/Clients/robbotina.png";
+import somnium from "../../public/Partners Logo/400x200/Clients/somnium-space.png";
+import sunmoney from "../../public/Partners Logo/400x200/Clients/sunmoney.png";
+import tvtwo from "../../public/Partners Logo/400x200/Clients/TV TWO.png";
+import velix from "../../public/Partners Logo/400x200/Clients/Velix.ID.png";
+
 
 const companies = [
   {
     id: 1,
-    name: "BitMart",
-    logo: "/bitmart.png",
+    name: "ABCC Exchange",
+    logo: ABCCExch,
     width: 200,
-    description: "We executed an impactful marketing strategy for BitMart, which included the release of a well-crafted press release to highlight the platform's latest advancements and the production of promotional videos to engage the audience and amplify brand visibility"
   },
   {
     id: 2,
-    name: "Wazirx",
-    logo: "/wazirx.png",
-    width: 300,
-    description: "We implemented a comprehensive marketing strategy for Wazirx, which included the launch of targeted advertising campaigns in cryptocurrency media, creation of high-quality content, including analytical articles, blogs and videos"
+    name: "Acorn Collective",
+    logo: Acorn,
+    width: 200,
   },
   {
     id: 3,
-    name: "IoTeX",
-    logo: "/iotex.png",
+    name: "Adhive",
+    logo: Adhive,
     width: 200,
-    description: "We implemented a dynamic marketing strategy for IoTeX, which included the creation of an engaging promotional video highlighting the platform's cutting-edge features and the announcement of an upcoming hardware test initiative"
+  },
+  {
+    id: 4,
+    name: "Asset Stream",
+    logo: AssetStream,
+    width: 200,
+  },
+  {
+    id: 5,
+    name: "Block lancer",
+    logo: blocklancer,
+    width: 200,
+  },
+  {
+    id: 6,
+    name: "Beat",
+    logo: beat,
+    width: 200,
+  },
+  {
+    id: 7,
+    name: "Birdchain",
+    logo: birdchain,
+    width: 200,
+  },
+  {
+    id: 8,
+    name: "BitMart Exchange",
+    logo: bitmart,
+    width: 200,
+  },
+  {
+    id: 9,
+    name: "Bitxoxo Exchange",
+    logo: bitxoxo,
+    width: 200,
+  },
+  {
+    id: 10,
+    name: "Blockium",
+    logo: blockium,
+    width: 200,
+  },
+  {
+    id: 11,
+    name: "Cloud Moolah",
+    logo: cloud,
+    width: 200,
+  },
+  {
+    id: 12,
+    name: "Coingecko",
+    logo: coin,
+    width: 200,
+  },
+  {
+    id: 13,
+    name: "Concert VR",
+    logo: concert,
+    width: 200,
+  },
+  {
+    id: 14,
+    name: "DAD",
+    logo: dad,
+    width: 200,
+  },
+  {
+    id: 15,
+    name: "Ftech",
+    logo: ftech,
+    width: 200,
+  },
+  {
+    id: 16,
+    name: "Grapevine",
+    logo: grape,
+    width: 200,
+  },
+  {
+    id: 17,
+    name: "Hypd",
+    logo: hypd,
+    width: 200,
+  },
+  {
+    id: 18,
+    name: "La Token",
+    logo: la,
+    width: 200,
+  },
+  {
+    id: 19,
+    name: "LGO",
+    logo: lgo,
+    width: 200,
+  },
+  {
+    id: 20,
+    name: "Lympo",
+    logo: lympo,
+    width: 200,
+  },
+  {
+    id: 21,
+    name: "Medichain",
+    logo: medi,
+    width: 200,
+  },
+  {
+    id: 22,
+    name: "Mobu",
+    logo: mobu,
+    width: 200,
+  },
+  {
+    id: 23,
+    name: "Monarch",
+    logo: monarch,
+    width: 200,
+  },
+  {
+    id: 24,
+    name: "Nauticus",
+    logo: nauticus,
+    width: 200,
+  },
+  {
+    id: 25,
+    name: "Neurogress",
+    logo: neurograss,
+    width: 200,
+  },
+  {
+    id: 26,
+    name: "OK Exchange",
+    logo: okex,
+    width: 200,
+  },
+  {
+    id: 27,
+    name: "Organic Token",
+    logo: organic,
+    width: 200,
+  },
+  {
+    id: 28,
+    name: "Ponder",
+    logo: ponder,
+    width: 200,
+  },
+  {
+    id: 29,
+    name: "Q1 Net",
+    logo: q1,
+    width: 200,
+  },
+  {
+    id: 30,
+    name: "Robotina",
+    logo: robbotina,
+    width: 200,
+  },
+  {
+    id: 31,
+    name: "Somnium Space",
+    logo: somnium,
+    width: 200,
+  },
+  {
+    id: 32,
+    name: "Sun Money",
+    logo: sunmoney,
+    width: 200,
+  },
+  {
+    id: 33,
+    name: "TV Two",
+    logo: tvtwo,
+    width: 200,
+  },
+  {
+    id: 34,
+    name: "Velix Id",
+    logo: velix,
+    width: 200,
   }
-]
+];
 
 export function Clients() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [displayCompanies, setDisplayCompanies] = useState(companies)
-
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [visibleCompanies, setVisibleCompanies] = useState<number[]>([0, 1, 2]); // Initially show first 3
+  
   useEffect(() => {
-    const prevIndex = (currentIndex - 1 + companies.length) % companies.length
-    const nextIndex = (currentIndex + 1) % companies.length
-    setDisplayCompanies([
-      companies[prevIndex],
-      companies[currentIndex],
-      companies[nextIndex]
-    ])
-  }, [currentIndex])
+    let interval: ReturnType<typeof setInterval>;
+    
+    if (isAutoScrolling) {
+      interval = setInterval(() => {
+        setActiveIndex((prev) => {
+          const newIndex = prev >= companies.length - 1 ? 0 : prev + 1;
+          updateVisibleCompanies(newIndex);
+          return newIndex;
+        });
+      }, 3000); // Scroll every 3 seconds
+    }
+    
+    return () => clearInterval(interval);
+  }, [isAutoScrolling]);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % companies.length)
-  }
+  const updateVisibleCompanies = (centerIndex: number) => {
+    // Calculate which companies should be visible (center +/- 1, with wrap-around)
+    const total = companies.length;
+    const prev = (centerIndex - 1 + total) % total;
+    const next = (centerIndex + 1) % total;
+    setVisibleCompanies([prev, centerIndex, next]);
+  };
+
+  const handleClientClick = (index: number) => {
+    setActiveIndex(index);
+    updateVisibleCompanies(index);
+    setIsAutoScrolling(false); // Pause auto-scrolling when user interacts
+    
+    // Resume auto-scrolling after 5 seconds of inactivity
+    const timeout = setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 5000);
+    
+    return () => clearTimeout(timeout);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,12 +294,12 @@ export function Clients() {
         delayChildren: 0.3
       }
     }
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  }
+  };
 
   return (
     <motion.div 
@@ -70,7 +311,7 @@ export function Clients() {
     >
       {/* Gradient overlay */}
       <motion.div 
-        className="absolute right-0 top-0 w-1/3 h-screen bg-blue-900/20 blur-[150px]"
+        className="absolute right-0 top-0 w-1/3 h-screen blur-[150px]"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
@@ -80,7 +321,7 @@ export function Clients() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2 
-          className="text-3xl md:text-5xl lg:text-7xl font-bold max-w-4xl mb-12 md:mb-24"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mb-12 md:mb-24"
           variants={itemVariants}
         >
           <motion.span
@@ -102,112 +343,89 @@ export function Clients() {
           </motion.span>
         </motion.h2>
 
-        {/* Company logos */}
+        {/* Client logos carousel */}
         <motion.div 
-          className="h-[300px] md:h-[400px] mb-12 md:mb-24 relative"
+          className="mb-16"
           variants={itemVariants}
         >
-          <div className="flex flex-col items-center justify-center h-full">
-            {displayCompanies.map((company, index) => (
-              <motion.div
-                key={company.id}
-                initial={false}
-                animate={{
-                  y: (index - 1) * (window.innerWidth < 768 ? 100 : 150),
-                  opacity: index === 1 ? 1 : 0.3,
-                  filter: index === 1 ? 'blur(0px)' : 'blur(4px)',
-                  scale: index === 1 ? 1 : 0.8,
-                }}
-                transition={{ 
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 120,
-                  damping: 20
-                }}
-                whileHover={{ scale: index === 1 ? 1.05 : 0.85 }}
-                className="absolute cursor-pointer"
-              >
-                <motion.img 
-                  src={company.logo}
-                  alt={`${company.name} logo`}
-                  style={{
-                    width: window.innerWidth < 768 ? company.width * 0.7 : company.width,
-                    height: 'auto'
-                  }}
-                  className="transition-opacity"
-                  whileHover={{ 
-                    filter: "brightness(1.2)",
-                    rotate: [0, -2, 2, -2, 0],
-                    transition: {
-                      rotate: {
-                        duration: 0.5,
-                        repeat: Infinity,
-                        repeatType: "reverse"
-                      }
-                    }
-                  }}
-                />
-              </motion.div>
+          {/* Logo carousel */}
+          <div className="relative px-4 py-12 overflow-hidden">
+            {/* Left arrow */}
+            <button 
+              onClick={() => handleClientClick((activeIndex - 1 + companies.length) % companies.length)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
+              aria-label="Previous company"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Carousel container */}
+            <div className="flex justify-center items-center gap-4 md:gap-8 transition-all duration-500">
+              {visibleCompanies.map((companyIndex, i) => (
+                <motion.div 
+                  key={companies[companyIndex].id}
+                  className={`relative cursor-pointer transition-all duration-500 ease-out flex-shrink-0 
+                    ${i === 1 ? 'w-64 md:w-96 mx-4 z-20' : 'w-32 md:w-64 opacity-50 z-10'}`}
+                  onClick={() => handleClientClick(companyIndex)}
+                  whileHover={{ scale: i === 1 ? 1.05 : 1.1 }}
+                  layout
+                >
+                  <div className={`
+                    flex items-center justify-center p-6 rounded-xl h-40 md:h-56
+                    ${i === 1 ? 'bg-white/65' : 'bg-gray-800/60'}
+                  `}>
+                    <img 
+                      src={companies[companyIndex].logo}
+                      alt={companies[companyIndex].name} 
+                      className={`
+                        object-contain max-h-full max-w-full transition-all
+                        ${i === 1 ? 'transform scale-110' : 'filter grayscale hover:filter-none'}
+                      `}
+                    />
+                  </div>
+                  {i === 1 && (
+                    <motion.div 
+                      className="absolute -bottom-2 left-0 right-0 text-center bg-[#00AB4F] text-white py-1 px-4 mx-auto w-3/4 rounded-full shadow-lg"
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {companies[companyIndex].name}
+                    </motion.div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Right arrow */}
+            <button 
+              onClick={() => handleClientClick((activeIndex + 1) % companies.length)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/70 hover:bg-gray-700/70 p-2 rounded-full text-white"
+              aria-label="Next company"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {companies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleClientClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? 'bg-[#00AB4F] w-8' : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`View client ${index + 1}`}
+              />
             ))}
           </div>
         </motion.div>
-
-        {/* Description */}
-        <motion.div 
-          className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-0"
-          variants={itemVariants}
-        >
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              className="text-gray-300 max-w-xl text-base md:text-lg"
-            >
-              {companies[currentIndex].description}
-            </motion.p>
-          </AnimatePresence>
-          
-          {/* Next button */}
-          <motion.button 
-            className="flex items-center gap-2 text-white hover:text-[#00AB4F] transition-colors group"
-            onClick={handleNext}
-            aria-label="Next company"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              NEXT
-            </motion.span>
-            <motion.div
-              animate={{ 
-                x: [0, 5, 0],
-                transition: {
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}
-              whileHover={{ 
-                x: [0, 10, 0],
-                transition: {
-                  duration: 0.8,
-                  repeat: Infinity
-                }
-              }}
-            >
-              <ArrowRight className="w-5 h-5" />
-            </motion.div>
-          </motion.button>
-        </motion.div>
       </div>
     </motion.div>
-  )
+  );
 }
-
