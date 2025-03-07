@@ -1,4 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+
+const socialLinks = [
+  { name: "INSTAGRAM", url: "http://instagram.com/digitalnotice", icon: <FaInstagram /> },
+  { name: "LINKEDIN", url: "http://linkedin.com/company/digitalnotice", icon: <FaLinkedin /> },
+  { name: "FACEBOOK", url: "https://facebook.com/digitalnoticemedia", icon: <FaFacebook /> },
+  { name: "TWITTER", url: "http://twitter.com/digital_notice", icon: <FaTwitter /> },
+];
 
 export function ContactUs() {
   const containerVariants = {
@@ -197,30 +205,45 @@ export function ContactUs() {
               </motion.span>
             </motion.div>
             <motion.div 
-              className="text-gray-500"
+              className="text-gray-500 flex flex-col md:flex-row items-center gap-2 md:gap-4"
               variants={itemVariants}
             >
-              © 2018-2025 Digital Notice Media Labs - All Rights Reserved
+              <span>© 2018-2025 Digital Notice Media Labs - All Rights Reserved</span>
+              <div className="flex gap-3 md:gap-4">
+                <motion.a 
+                  href="/Disclaimer.docx" 
+                  className="text-green-500 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.1, color: "#ffffff" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  DISCLAIMER
+                </motion.a>
+                <span className="text-gray-500">|</span>
+                <motion.a 
+                  href="/PrivacyPolicy.docx" 
+                  className="text-green-500 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.1, color: "#ffffff" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Privacy Policy
+                </motion.a>
+              </div>
             </motion.div>
             <motion.div 
               className="flex flex-wrap gap-4 md:gap-6"
               variants={containerVariants}
             >
-              {[
-                { name: "INSTAGRAM", url: "http://instagram.com/digitalnotice" },
-                { name: "LINKEDIN", url: "http://linkedin.com/company/digitalnotice" },
-                { name: "FACEBOOK", url: "https://facebook.com/digitalnoticemedia" },
-                { name: "TWITTER", url: "http://twitter.com/digital_notice" }
-              ].map((social) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.url}
-                  className="text-green-500 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 hover:text-white transition-colors text-2xl"
                   whileHover={{ scale: 1.1, color: "#ffffff" }}
                   whileTap={{ scale: 0.95 }}
-                  variants={itemVariants}
                 >
-                  {social.name}
+                  {social.icon}
                 </motion.a>
               ))}
             </motion.div>
@@ -230,4 +253,3 @@ export function ContactUs() {
     </motion.div>
   )
 }
-
