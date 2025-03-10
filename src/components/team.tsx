@@ -63,17 +63,6 @@ export default function Teams() {
         }
     };
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { 
-            opacity: 1, 
-            y: 0,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-
     const titleVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
@@ -135,23 +124,18 @@ export default function Teams() {
                     variants={containerVariants}
                 >
                     {team.map((member, index) => (
-                        <motion.div
-                            key={index}
-                            className="rounded-lg p-2 flex flex-col items-center space-y-3 cursor-pointer group"
-                            variants={itemVariants}
-                            whileHover={{ 
-                                scale: 1.05,
-                                transition: { duration: 0.3 }
-                            }}
+                        <div 
+                            key={index} 
+                            className="rounded-lg p-4 flex flex-col items-center space-y-3 cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-opacity-80"
                         >
-                            <div className="w-44 h-48 overflow-hidden relative">
+                            <div className="w-44 h-48 overflow-hidden relative rounded-lg">
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cover mix-blend-screen group-hover:scale-105 transition-transform duration-300"
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>
-                            <h3 className="text-white text-lg font-semibold text-center">
+                            <h3 className="text-white text-lg font-semibold text-center group-hover:text-[#4ade80] transition-colors">
                                 {member.name}
                             </h3>
                             <h4 className="text-gray-400 text-sm text-center">
@@ -181,8 +165,9 @@ export default function Teams() {
                                     </a>
                                 )}
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
+
                 </motion.div>
             </motion.div>
         </div>
