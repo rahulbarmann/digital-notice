@@ -594,6 +594,14 @@
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.5.tgz"
   integrity sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==
 
+"@types/react-lazy-load-image-component@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.npmjs.org/@types/react-lazy-load-image-component/-/react-lazy-load-image-component-1.6.4.tgz"
+  integrity sha512-8pFPeDPF4yVG4lU1/ixZidJEEDZmEOYOTYDvmIu2IAabyuv97Q7n/93nMCocHvQ7vD1czKGiW+op55D9m3MkdA==
+  dependencies:
+    "@types/react" "*"
+    csstype "^3.0.2"
+
 "@types/react-scroll@^1.8.10":
   version "1.8.10"
   resolved "https://registry.npmjs.org/@types/react-scroll/-/react-scroll-1.8.10.tgz"
@@ -929,11 +937,12 @@ didyoumean@^1.2.2:
 "digital-notice@file:.":
   version "0.0.0"
   dependencies:
-    digital-notice "file:../../../../AppData/Local/Yarn/Cache/v6/npm-digital-notice-0.0.0-ca4eb528-d481-4ce5-8938-fa51fd27c93a-1737559488256/node_modules/digital-notice"
+    digital-notice "file:../../../Library/Caches/Yarn/v6/npm-digital-notice-0.0.0-89614b92-d846-4a35-a7b1-77bd3a8583c8-1741591348618/node_modules/digital-notice"
     framer-motion "^11.18.2"
     lucide-react "^0.469.0"
     react "^18.3.1"
     react-dom "^18.3.1"
+    react-icons "^5.5.0"
     react-intersection-observer "^9.15.0"
     react-parallax "^3.5.1"
     react-scroll "^1.9.0"
@@ -1709,6 +1718,11 @@ react-dom@^18.3.1:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-icons@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-5.5.0.tgz"
+  integrity sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==
 
 react-intersection-observer@^9.15.0:
   version "9.15.0"
