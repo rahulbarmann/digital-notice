@@ -46,7 +46,7 @@ export function Hero() {
       
       <div className="relative z-20 flex flex-col justify-between h-screen">
         {/* NOTICE text positioned absolutely for mobile - adjusted positioning */}
-        <div className="lg:hidden absolute bottom-[50%] md:bottom-[30%] right-4">
+        <div className="md:hidden absolute bottom-[50%] md:bottom-[30%] right-4">
           <motion.h2
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -127,7 +127,7 @@ export function Hero() {
               </motion.div>
 
               {/* NOTICE text for desktop only */}
-              <div className="hidden lg:flex w-full md:flex-1 justify-end order-3">
+              <div className="hidden md:flex w-full md:flex-1 justify-end order-3">
                 <motion.h2
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
