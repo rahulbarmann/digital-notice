@@ -101,7 +101,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <motion.button 
-          className="md:hidden text-white p-2 mx-5 z-50 relative"
+          className="md:hidden text-white p-2 z-50 relative"
           onClick={toggleMenu}
           aria-label="Toggle menu"
           whileHover={{ scale: 1.1 }}

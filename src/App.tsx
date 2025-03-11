@@ -15,7 +15,7 @@ const fadeInUp = {
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-black min-h-screen text-white overflow-x-hidden">
       <Navbar />
       <motion.section 
         id="home"
