@@ -52,7 +52,7 @@ export default function Teams() {
             github: 'https://github.com/VanshSahay'
         },
         {
-            image: '/Nipu.png', 
+            image: '/Nipu copy.png', 
             name: 'Nipu Das', 
             position: 'Developer, UI/UX',
             linkedin: 'https://www.linkedin.com/in/nipu-das-99a365279/',
