@@ -15,26 +15,26 @@ export default function Teams() {
         {
             image: '/Sheikh.png',
             name: 'Shekh Razaul Islam',
-            position: 'Lead, Finance & Operations',
+            position: 'Co Founder & CMO',
             linkedin: 'https://www.linkedin.com/in/sheikhrazaulislam/',
         },
         {
             image: '/Jesu.png',
             name: 'Jesu Neelkamal Borah',
-            position: 'Lead, Communications',
+            position: 'Lead, Operations',
             linkedin: 'https://www.linkedin.com/in/thesmartobject/',
         },
         {
             image: '/Rahul.png',
             name: 'Rahul Barman',
-            position: 'Lead, Tech',
+            position: 'Lead, Technology',
             linkedin: 'https://www.linkedin.com/in/rahulbarmann/',
             github: 'https://github.com/rahulbarmann'
         },
         {
             image: '/Dhrupad.png',
             name: 'Dhrupad Das',
-            position: 'Advisor, Product & Legal',
+            position: 'Advisor',
             linkedin: 'https://www.linkedin.com/in/dhrupad-das1905/',
         },
         {
