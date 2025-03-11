@@ -56,7 +56,7 @@ import chainpoint from "../../src/PartnersLogo/400x200/Events/chainpoint.png";
 import chainway from "../../src/PartnersLogo/400x200/Events/chainway.png";
 import coinsbank from "../../src/PartnersLogo/400x200/Events/coinsbank.png";
 import cointelegraph from "../../src/PartnersLogo/400x200/Events/Cointelegraph.png";
-import cryptochicks from "../../src/PartnersLogo/400x200/Events/Cointelegraph.png";
+import cryptochicks from "../../src/PartnersLogo/400x200/Events/cryptochicks.png";
 import deltasummit from "../../src/PartnersLogo/400x200/Events/delta-summit.png";
 import descLogo from "../../src/PartnersLogo/400x200/Events/descLogo.png";
 import dfine from "../../src/PartnersLogo/400x200/Events/dfine.png";
