@@ -211,16 +211,20 @@ export function ContactUs() {
               <span>© 2018-2025 Digital Notice Media Labs - All Rights Reserved</span>
               <div className="flex gap-3 md:gap-4">
                 <motion.a 
-                  href="/Disclaimer.docx" 
+                  href="/Disclaimer.pdf"
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-green-500 hover:text-white transition-colors"
                   whileHover={{ scale: 1.1, color: "#ffffff" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  DISCLAIMER
+                  Disclaimer
                 </motion.a>
                 <span className="text-gray-500">|</span>
                 <motion.a 
-                  href="/PrivacyPolicy.docx" 
+                  href="/PrivacyPolicy.pdf"
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-green-500 hover:text-white transition-colors"
                   whileHover={{ scale: 1.1, color: "#ffffff" }}
                   whileTap={{ scale: 0.95 }}
