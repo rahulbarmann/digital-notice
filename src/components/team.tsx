@@ -1,33 +1,40 @@
 'use client'
 
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { BsArrowDownRightCircle } from "react-icons/bs";
 import { motion } from 'framer-motion';
 
 export default function Teams() {
     const team = [
         {
+            image: '/Shoaib.png',
+            name: 'Mohd Shoaib',
+            position: 'Co Founder & CEO',
+            linkedin: 'https://www.linkedin.com/in/msloveskills/',
+        },
+        {
             image: '/Sheikh.png',
             name: 'Shekh Razaul Islam',
-            position: 'Lead, Finance & Operations',
+            position: 'Co Founder & CMO',
             linkedin: 'https://www.linkedin.com/in/sheikhrazaulislam/',
         },
         {
             image: '/Jesu.png',
             name: 'Jesu Neelkamal Borah',
-            position: 'Lead, Communications',
+            position: 'Lead, Operations',
             linkedin: 'https://www.linkedin.com/in/thesmartobject/',
         },
         {
             image: '/Rahul.png',
             name: 'Rahul Barman',
-            position: 'Lead, Tech',
+            position: 'Lead, Technology',
             linkedin: 'https://www.linkedin.com/in/rahulbarmann/',
             github: 'https://github.com/rahulbarmann'
         },
         {
             image: '/Dhrupad.png',
             name: 'Dhrupad Das',
-            position: 'Advisor, Product & Legal',
+            position: 'Advisor',
             linkedin: 'https://www.linkedin.com/in/dhrupad-das1905/',
         },
         {
@@ -44,8 +51,8 @@ export default function Teams() {
             linkedin: 'https://www.linkedin.com/in/vanshsahay/',
             github: 'https://github.com/VanshSahay'
         },
-        { 
-            image: '/nipu.png', 
+        {
+            image: '/Nipu copy.png', 
             name: 'Nipu Das', 
             position: 'Developer, UI/UX',
             linkedin: 'https://www.linkedin.com/in/nipu-das-99a365279/',
@@ -83,41 +90,34 @@ export default function Teams() {
     return (
         <div className="min-h-screen relative flex flex-col justify-center items-center py-16">
             <motion.div 
-                className="w-full max-w-6xl mx-auto flex flex-col justify-center items-start"
+                className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center"
                 initial="hidden"
                 animate="visible"
             >
-                <motion.h1 
-                    className="text-2xl md:text-5xl leading-tight md:leading-tight font-bold mb-12 md:mb-24 text-left"
+                <motion.div 
+                    className="text-center mb-16 md:mb-24 relative"
                     variants={titleVariants}
                 >
                     <motion.div 
-                        className="flex flex-col md:flex-row md:items-baseline md:gap-4"
+                        className="flex flex-col items-center justify-center"
                         variants={lineVariants}
                     >
                         <motion.span 
-                            className="text-[#00ab4f]"
+                            className="text-[#00ab4f] text-6xl md:text-8xl font-bold relative"
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", stiffness: 300 }}
                         >
-                            OUR TEAM
+                            MEET OUR
                         </motion.span>
-                        <span>CONSISTS OF HIGHLY</span>
+                        
+                        <motion.div 
+                            className="flex flex-row items-center justify-center gap-3 text-2xl md:text-5xl mt-4"
+                            variants={lineVariants}
+                        >
+                            <BsArrowDownRightCircle /> CREATIVE TEAM
+                        </motion.div>
                     </motion.div>
-                    <motion.div variants={lineVariants}>QUALIFIED EXPERTS, EACH OF WHOM</motion.div>
-                    <motion.div 
-                        className="text-[#00ab4f]"
-                        variants={lineVariants}
-                    >
-                        HAS IN-DEPTH KNOWLEDGE AND MANY
-                    </motion.div>
-                    <motion.div 
-                        className="text-[#00ab4f]"
-                        variants={lineVariants}
-                    >
-                        YEARS OF EXPERIENCE IN THEIR FIELD.
-                    </motion.div>
-                </motion.h1>
+                </motion.div>
                 
                 <motion.div 
                     className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center"
@@ -128,19 +128,19 @@ export default function Teams() {
                             key={index} 
                             className="rounded-lg p-4 flex flex-col items-center space-y-3 cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-opacity-80"
                         >
-                            <div className="w-44 h-48 overflow-hidden relative rounded-lg">
+                            <div className="w-60 h-56 overflow-hidden relative rounded-lg">
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                    className="w-[120%] h-[120%] object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-white text-lg font-semibold text-center group-hover:text-[#4ade80] transition-colors">
+                            <h4 className="text-white text-lg font-semibold text-center group-hover:text-[#4ade80] transition-colors">
                                 {member.name}
-                            </h3>
-                            <h4 className="text-gray-400 text-sm text-center">
-                                {member.position}
                             </h4>
+                            <h3 className="text-gray-400 text-sm text-center">
+                                {member.position}
+                            </h3>
                             <div className="flex space-x-3">
                                 {member.linkedin && (
                                     <a 
@@ -167,7 +167,6 @@ export default function Teams() {
                             </div>
                         </div>
                     ))}
-
                 </motion.div>
             </motion.div>
         </div>
