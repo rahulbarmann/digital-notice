@@ -38,6 +38,12 @@ export default function Teams() {
             linkedin: 'https://www.linkedin.com/in/dhrupad-das1905/',
         },
         {
+            image: '/Mohsin.png',
+            name: 'Syed Mohsin Raja',
+            position: 'Marketing Consultant',
+            linkedin: 'https://www.linkedin.com/in/syedmohsinraza/',
+        },
+        {
             image: '/Sumit.png',
             name: 'Sumit Mazumdar',
             position: 'Developer, Full Stack',
